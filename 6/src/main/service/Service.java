@@ -30,6 +30,6 @@ public class Service {
     public boolean canStoreProductAtTemperature(List<Product> products, String productName, double temperature) {
         return products.stream()
                 .filter(p -> p.getName().equalsIgnoreCase(productName))
-                .anyMatch(p -> temperature >= p.getRecommendedTemperature());
+                .anyMatch(p -> Math.abs(temperature - p.getRecommendedTemperature()) <= 3.0);
     }
 }

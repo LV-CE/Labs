@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="selentar.productmanager.UIController">
+    <top>
+        <VBox prefHeight="65.0" prefWidth="600.0">
+
+            <MenuBar>
+                <Menu mnemonicParsing="false" text="Файл">
+                    <MenuItem mnemonicParsing="false" onAction="#saveAs" text="Зберегти як" />
+                    <MenuItem mnemonicParsing="false" onAction="#readFrom" text="Загрузити з" />
+                </Menu>
+                <Menu mnemonicParsing="false" text="Список">
+                    <MenuItem mnemonicParsing="false" onAction="#add" text="Додати продукт" />
+                    <MenuItem mnemonicParsing="false" onAction="#delete" text="Видалити продукт" />
+                    <MenuItem mnemonicParsing="false" onAction="#show" text="Перезагрузити продукти" />
+               <MenuItem mnemonicParsing="false" onAction="#resort" text="Сортувати продукти" />
+                </Menu>
+            </MenuBar>
+
+            <ComboBox fx:id="operationsChoiceBox" prefHeight="26.0" prefWidth="641.0" promptText="Виберіть операцію:">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="1. Пошук за найменуванням" />
+                        <String fx:value="2. Пошук за найменуванням і ціною" />
+                        <String fx:value="3. Пошук за терміном зберігання" />
+                        <String fx:value="4. Сортування за температурою і ціною" />
+                        <String fx:value="5. Перевірка можливості зберігання" />
+                        <String fx:value="6. Список виробників за ціною" />
+                        <String fx:value="7. Сортовані продукти за найменуванням" />
+                        <String fx:value="8. Сортовані найкоштовніші продукти за найменуванням" />
+                    </FXCollections>
+                </items>
+                <VBox.margin>
+                    <Insets left="5.0" top="5.0" />
+                </VBox.margin>
+            </ComboBox>
+        </VBox>
+    </top>
+    <center>
+        <TableView fx:id="productTable" layoutX="5.0" layoutY="5.0" prefHeight="600.0" prefWidth="650.0" AnchorPane.bottomAnchor="4.600000000000023" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="4.600000000000023" AnchorPane.topAnchor="5.0">
+            <columns>
+                <TableColumn fx:id="idCol" prefWidth="34.19998013973236" text="ID" />
+                <TableColumn fx:id="nameCol" prefWidth="160.8000259399414" text="Назва" />
+                <TableColumn fx:id="priceCol" prefWidth="55.5999755859375" text="Ціна" />
+                <TableColumn fx:id="expiryCol" prefWidth="87.60003662109375" text="Термін" />
+                <TableColumn fx:id="unitCol" prefWidth="59.20001220703125" text="Од. вим." />
+                <TableColumn fx:id="manufacturerCol" prefWidth="116.79995727539062" text="Виробник" />
+                <TableColumn fx:id="quantityCol" prefWidth="36.0" text="К-сть" />
+                <TableColumn fx:id="tempCol" prefWidth="91.4000244140625" text="Температура" />
+            </columns>
+        </TableView>
+    </center>
+</BorderPane>

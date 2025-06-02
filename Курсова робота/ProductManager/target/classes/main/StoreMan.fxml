@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.controller.UIController">
+    <top>
+        <VBox prefHeight="64.0" prefWidth="800.0">
+
+            <MenuBar prefWidth="800.0">
+                <Menu mnemonicParsing="false" text="Файл">
+                    <MenuItem mnemonicParsing="false" onAction="#saveAs" text="Зберегти як" />
+                    <MenuItem mnemonicParsing="false" onAction="#readFrom" text="Загрузити з" />
+                </Menu>
+                <Menu mnemonicParsing="false" text="Список">
+                    <MenuItem mnemonicParsing="false" onAction="#addProduct" text="Додати продукт" />
+                    <MenuItem mnemonicParsing="false" onAction="#delete" text="Видалити продукт" />
+                    <MenuItem mnemonicParsing="false" onAction="#showProduct" text="Показати список продуктів" />
+                </Menu>
+                <Menu mnemonicParsing="false" text="Квитанції">
+                    <MenuItem mnemonicParsing="false" onAction="#addReceipt" text="Додати квитанцію" />
+                    <MenuItem mnemonicParsing="false" onAction="#delete" text="Видалити квитанцію" />
+                    <MenuItem mnemonicParsing="false" onAction="#showReceipt" text="Показати список квитанцій" />
+                </Menu>
+            </MenuBar>
+
+            <ComboBox fx:id="operationsChoiceBox" prefHeight="26.0" prefWidth="791.0" promptText="Виберіть операцію склада:">
+                <items>
+                    <FXCollections fx:factory="observableArrayList">
+                        <String fx:value="1. Пошук за найменуванням" />
+                        <String fx:value="2. Пошук за ціною" />
+                        <String fx:value="3. Пошук за датой надходження" />
+                        <String fx:value="4. Пошук за типом продукту" />
+                        <String fx:value="5. Пошук за виробником" />
+                        <String fx:value="6. Пошук за серійним номером" />
+                        <String fx:value="7. Сортування за виробником" />
+                        <String fx:value="8. Сортування за датой надходження" />
+                        <String fx:value="9. Сортовані продукти за найменуванням" />
+                        <String fx:value="10. Сортовані найкоштовніші продукти за найменуванням" />
+                    </FXCollections>
+                </items>
+                <VBox.margin>
+                    <Insets left="5.0" top="5.0" />
+                </VBox.margin>
+            </ComboBox>
+        </VBox>
+    </top>
+   <center>
+       <TableView fx:id="productTable" prefHeight="600.0" prefWidth="650.0" BorderPane.alignment="CENTER">
+           <columns>
+               <TableColumn fx:id="idCol" prefWidth="46" text="ID" />
+               <TableColumn fx:id="nameCol" prefWidth="142" text="Назва" />
+               <TableColumn fx:id="priceCol" prefWidth="75" text="Ціна" />
+               <TableColumn fx:id="receiptCol" prefWidth="129.0" text="Дата надходження" />
+               <TableColumn fx:id="serialNumCol" prefWidth="103.0" text="Серійний номер" />
+               <TableColumn fx:id="manufacturerCol" prefWidth="132" text="Виробник" />
+               <TableColumn fx:id="quantityCol" prefWidth="60.0" text="К-сть" />
+               <TableColumn fx:id="unitCol" prefWidth="105.0" text="Категорія" />
+           </columns>
+       </TableView>
+   </center>
+</BorderPane>

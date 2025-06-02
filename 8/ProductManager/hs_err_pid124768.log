@@ -1,0 +1,277 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 255852544 bytes. Error detail: G1 virtual space
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   This process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Zero Based Compressed Oops mode in which the Java heap is
+#     placed in the first 32GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 32GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (os_windows.cpp:3564), pid=124768, tid=120488
+#
+# JRE version:  (24.0.1+9) (build )
+# Java VM: OpenJDK 64-Bit Server VM (24.0.1+9-30, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -javaagent:N:\Programs\IntelliJ IDEA 2025.1\lib\idea_rt.jar=51656 -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 --module-path=C:\Users\lolol\.m2\repository\org\controlsfx\controlsfx\11.2.1\controlsfx-11.2.1.jar;C:\Users\lolol\.m2\repository\com\gluonhq\attach\audio\4.0.17\audio-4.0.17.jar;C:\Users\lolol\.m2\repository\org\openjfx\javafx-graphics\17.0.6\javafx-graphics-17.0.6-win.jar;C:\Users\lolol\.m2\repository\org\kordamp\ikonli\ikonli-core\12.3.1\ikonli-core-12.3.1.jar;C:\Users\lolol\.m2\repository\com\github\almasb\fxgl-entity\17.3\fxgl-entity-17.3.jar;C:\Users\lolol\.m2\repository\org\kordamp\ikonli\ikonli-javafx\12.3.1\ikonli-javafx-12.3.1.jar;C:\Users\lolol\.m2\repository\com\github\almasb\fxgl-io\17.3\fxgl-io-17.3.jar;C:\Users\lolol\.m2\repository\com\gluonhq\attach\util\4.0.17\util-4.0.17.jar;C:\Users\lolol\.m2\repository\com\github\almasb\fxgl-scene\17.3\fxgl-scene-17.3.jar;C:\Users\lolol\.m2\repository\eu\hansolo\fx\heatmap\21.0.3\heatmap-21.0.3.jar;C:\Users\lolol\.m2\repository\org\kordamp\bootstrapfx\bootstrapfx-core\0.4.0\bootstrapfx-core-0.4.0.jar;C:\Users\lolol\.m2\repository\org\openjfx\javafx-web\17.0.6\javafx-web-17.0.6-win.jar;C:\Users\lolol\.m2\repository\com\dlsc\formsfx\formsfx-core\11.6.0\formsfx-core-11.6.0.jar;C:\Users\lolol\.m2\repository\eu\hansolo\toolbox\21.0.5\toolbox-21.0.5.jar;C:\Users\lolol\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.14.2\jackson-databind-2.14.2.jar;C:\Users\lolol\.m2\repository\com\gluonhq\attach\storage\4.0.17\storage-4.0.17.jar;C:\Users\lolol\.m2\repository\eu\hansolo\tilesfx\21.0.3\tilesfx-21.0.3.jar;C:\Users\lolol\.m2\repository\org\jetbrains\kotlin\kotlin-stdlib\1.8.10\kotlin-stdlib-1.8.10.jar;C:\Users\lolol\.m2\repository\eu\hansolo\toolboxfx\21.0.3\toolboxfx-21.0.3.jar;C:\Users\lolol\.m2\repository\org\openjfx\javafx-swing\17.0.6\javafx-swing-17.0.6-win.jar;C:\Users\lolol\.m2\repository\com\gluonhq\attach\lifecycle\4.0.17\lifecycle-4.0.17.jar;C:\Users\lolol\.m2\repository\com\github\almasb\fxgl-core\17.3\fxgl-core-17.3.jar;C:\Users\lolol\.m2\repository\com\github\almasb\fxgl\17.3\fxgl-17.3.jar;C:\Use-Djdk.module.main=selentar.productmanager selentar.productmanager/selentar.productmanager.StartWork
+
+Host: AMD Ryzen 7 6800H with Radeon Graphics         , 16 cores, 15G,  Windows 10 , 64 bit Build 19041 (10.0.19041.5794)
+Time: Fri May 30 22:32:11 2025  Windows 10 , 64 bit Build 19041 (10.0.19041.5794) elapsed time: 0.012368 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000001ce691aade0):  JavaThread "Unknown thread" [_thread_in_vm, id=120488, stack(0x0000003fe3000000,0x0000003fe3100000) (1024K)]
+
+Stack: [0x0000003fe3000000,0x0000003fe3100000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x730739]  (no source info available)
+V  [jvm.dll+0x8d9b23]  (no source info available)
+V  [jvm.dll+0x8dc00d]  (no source info available)
+V  [jvm.dll+0x8dc683]  (no source info available)
+V  [jvm.dll+0x2aa086]  (no source info available)
+V  [jvm.dll+0x72cc65]  (no source info available)
+V  [jvm.dll+0x72059a]  (no source info available)
+V  [jvm.dll+0x390cea]  (no source info available)
+V  [jvm.dll+0x3989f6]  (no source info available)
+V  [jvm.dll+0x38523e]  (no source info available)
+V  [jvm.dll+0x3854f8]  (no source info available)
+V  [jvm.dll+0x35d0cc]  (no source info available)
+V  [jvm.dll+0x35dd8d]  (no source info available)
+V  [jvm.dll+0x89d28f]  (no source info available)
+V  [jvm.dll+0x3f985d]  (no source info available)
+V  [jvm.dll+0x8858e6]  (no source info available)
+V  [jvm.dll+0x495f3e]  (no source info available)
+V  [jvm.dll+0x497d11]  (no source info available)
+C  [jli.dll+0x52a1]  (no source info available)
+C  [ucrtbase.dll+0x21bb2]  (no source info available)
+C  [KERNEL32.DLL+0x17374]  (no source info available)
+C  [ntdll.dll+0x4cc91]  (no source info available)
+
+Lock stack of current Java thread (top to bottom):
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00007fff7e57f318, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+Total: 0
+
+Other Threads:
+  0x000001ce6920dbb0 WorkerThread "GC Thread#0"                     [id=124060, stack(0x0000003fe3100000,0x0000003fe3200000) (1024K)]
+  0x000001ce69222c70 ConcurrentGCThread "G1 Main Marker"            [id=122720, stack(0x0000003fe3200000,0x0000003fe3300000) (1024K)]
+  0x000001ce69225d40 WorkerThread "G1 Conc#0"                       [id=119976, stack(0x0000003fe3300000,0x0000003fe3400000) (1024K)]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007fff7dcb14ea]
+VM state: not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x00007fff7e6045b0] Heap_lock - owner thread: 0x000001ce691aade0
+
+Heap address: 0x000000070ce00000, size: 3890 MB, Compressed Oops mode: Zero based, Oop shift amount: 3
+
+CDS archive(s) mapped at: [0x0000000000000000-0x0000000000000000-0x0000000000000000), size 0, SharedBaseAddress: 0x0000000800000000, ArchiveRelocationMode: 1.
+UseCompressedClassPointers 1, UseCompactObjectHeaders 0
+Narrow klass pointer bits 32, Max shift 3
+Narrow klass base: 0xffffffffffffffff, Narrow klass shift: -1
+Encoding Range: [0xffffffffffffffff - 0x000000007fffffff), (2147483648 bytes)
+Klass Range:    [0x0000000000000000 - 0x0000000000000000), (0 bytes)
+Klass ID Range:  [4294967295 - 0) (1)
+
+GC Precious Log:
+ CardTable entry size: 512
+ Card Set container configuration: InlinePtr #cards 4 size 8 Array Of Cards #cards 16 size 48 Howl #buckets 8 coarsen threshold 3686 Howl Bitmap #cards 512 size 80 coarsen threshold 460 Card regions per heap region 1 cards per card region 4096
+
+Heap:
+ garbage-first heap   total reserved 3983360K, committed 0K, used 0K [0x000000070ce00000, 0x0000000800000000)
+  region size 2048K, 0 young (0K), 0 survivors (0K)
+
+[error occurred during error reporting (printing heap information), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007fff7e0ce3e9]
+GC Heap History (0 events):
+No events
+
+Dll operation events (1 events):
+Event: 0.009 Loaded shared library C:\Users\lolol\.jdks\openjdk-24.0.1\bin\java.dll
+
+Deoptimization events (0 events):
+No events
+
+Classes loaded (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+VM Operations (0 events):
+No events
+
+Memory protections (0 events):
+No events
+
+Nmethod flushes (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff76a120000 - 0x00007ff76a12e000 	C:\Users\lolol\.jdks\openjdk-24.0.1\bin\java.exe
+0x00007fffc9f90000 - 0x00007fffca188000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007fffc80d0000 - 0x00007fffc8192000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007fffc7990000 - 0x00007fffc7c86000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007fffc7ec0000 - 0x00007fffc7fc0000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007fffb8ee0000 - 0x00007fffb8ef6000 	C:\Users\lolol\.jdks\openjdk-24.0.1\bin\jli.dll
+0x00007fffb8340000 - 0x00007fffb835b000 	C:\Users\lolol\.jdks\openjdk-24.0.1\bin\VCRUNTIME140.dll
+0x00007fffc9130000 - 0x00007fffc92cd000 	C:\WINDOWS\System32\USER32.dll
+0x00007fffc7d30000 - 0x00007fffc7d52000 	C:\WINDOWS\System32\win32u.dll
+0x00007fffadef0000 - 0x00007fffae18a000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.5794_none_60bcd33171f2783c\COMCTL32.dll
+0x00007fffc8460000 - 0x00007fffc848b000 	C:\WINDOWS\System32\GDI32.dll
+0x00007fffc81a0000 - 0x00007fffc823e000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007fffc77e0000 - 0x00007fffc78fa000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007fffc7c90000 - 0x00007fffc7d2d000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007fffc8240000 - 0x00007fffc826f000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007fffc0a40000 - 0x00007fffc0a4c000 	C:\Users\lolol\.jdks\openjdk-24.0.1\bin\vcruntime140_1.dll
+0x00007fffa23f0000 - 0x00007fffa247e000 	C:\Users\lolol\.jdks\openjdk-24.0.1\bin\msvcp140.dll
+0x00007fff7d940000 - 0x00007fff7e6e2000 	C:\Users\lolol\.jdks\openjdk-24.0.1\bin\server\jvm.dll
+0x00007fffc83b0000 - 0x00007fffc845f000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007fffc8fc0000 - 0x00007fffc905f000 	C:\WINDOWS\System32\sechost.dll
+0x00007fffc8c80000 - 0x00007fffc8da3000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007fffc7680000 - 0x00007fffc76a7000 	C:\WINDOWS\System32\bcrypt.dll
+0x00007fffc8270000 - 0x00007fffc82db000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007fffbcb50000 - 0x00007fffbcb77000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007fffc0510000 - 0x00007fffc051a000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007fffc7490000 - 0x00007fffc74db000 	C:\WINDOWS\SYSTEM32\POWRPROF.dll
+0x00007fffc7470000 - 0x00007fffc7482000 	C:\WINDOWS\SYSTEM32\UMPDC.dll
+0x00007fffc5490000 - 0x00007fffc54a2000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007fffc05a0000 - 0x00007fffc05aa000 	C:\Users\lolol\.jdks\openjdk-24.0.1\bin\jimage.dll
+0x00007fffbf180000 - 0x00007fffbf381000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007fffb5c20000 - 0x00007fffb5c54000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007fffc7900000 - 0x00007fffc7982000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007fffc0c60000 - 0x00007fffc0c6f000 	C:\Users\lolol\.jdks\openjdk-24.0.1\bin\instrument.dll
+0x00007fffb82d0000 - 0x00007fffb82ee000 	C:\Users\lolol\.jdks\openjdk-24.0.1\bin\java.dll
+0x00007fffc8e90000 - 0x00007fffc8fbb000 	C:\WINDOWS\System32\ole32.dll
+0x00007fffc92d0000 - 0x00007fffc9623000 	C:\WINDOWS\System32\combase.dll
+0x00007fffc9630000 - 0x00007fffc9d9e000 	C:\WINDOWS\System32\SHELL32.dll
+
+JVMTI agents:
+N:\Programs\IntelliJ IDEA 2025.1\lib\idea_rt.jar path:none, loaded, not initialized, instrumentlib options:51656
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Users\lolol\.jdks\openjdk-24.0.1\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.19041.5794_none_60bcd33171f2783c;C:\Users\lolol\.jdks\openjdk-24.0.1\bin\server
+
+VM Arguments:
+jvm_args: -javaagent:N:\Programs\IntelliJ IDEA 2025.1\lib\idea_rt.jar=51656 -Dfile.encoding=UTF-8 -Dsun.stdout.encoding=UTF-8 -Dsun.stderr.encoding=UTF-8 --module-path=C:\Users\lolol\.m2\repository\org\controlsfx\controlsfx\11.2.1\controlsfx-11.2.1.jar;C:\Users\lolol\.m2\repository\com\gluonhq\attach\audio\4.0.17\audio-4.0.17.jar;C:\Users\lolol\.m2\repository\org\openjfx\javafx-graphics\17.0.6\javafx-graphics-17.0.6-win.jar;C:\Users\lolol\.m2\repository\org\kordamp\ikonli\ikonli-core\12.3.1\ikonli-core-12.3.1.jar;C:\Users\lolol\.m2\repository\com\github\almasb\fxgl-entity\17.3\fxgl-entity-17.3.jar;C:\Users\lolol\.m2\repository\org\kordamp\ikonli\ikonli-javafx\12.3.1\ikonli-javafx-12.3.1.jar;C:\Users\lolol\.m2\repository\com\github\almasb\fxgl-io\17.3\fxgl-io-17.3.jar;C:\Users\lolol\.m2\repository\com\gluonhq\attach\util\4.0.17\util-4.0.17.jar;C:\Users\lolol\.m2\repository\com\github\almasb\fxgl-scene\17.3\fxgl-scene-17.3.jar;C:\Users\lolol\.m2\repository\eu\hansolo\fx\heatmap\21.0.3\heatmap-21.0.3.jar;C:\Users\lolol\.m2\repository\org\kordamp\bootstrapfx\bootstrapfx-core\0.4.0\bootstrapfx-core-0.4.0.jar;C:\Users\lolol\.m2\repository\org\openjfx\javafx-web\17.0.6\javafx-web-17.0.6-win.jar;C:\Users\lolol\.m2\repository\com\dlsc\formsfx\formsfx-core\11.6.0\formsfx-core-11.6.0.jar;C:\Users\lolol\.m2\repository\eu\hansolo\toolbox\21.0.5\toolbox-21.0.5.jar;C:\Users\lolol\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.14.2\jackson-databind-2.14.2.jar;C:\Users\lolol\.m2\repository\com\gluonhq\attach\storage\4.0.17\storage-4.0.17.jar;C:\Users\lolol\.m2\repository\eu\hansolo\tilesfx\21.0.3\tilesfx-21.0.3.jar;C:\Users\lolol\.m2\repository\org\jetbrains\kotlin\kotlin-stdlib\1.8.10\kotlin-stdlib-1.8.10.jar;C:\Users\lolol\.m2\repository\eu\hansolo\toolboxfx\21.0.3\toolboxfx-21.0.3.jar;C:\Users\lolol\.m2\repository\org\openjfx\javafx-swing\17.0.6\javafx-swing-17.0.6-win.jar;C:\Users\lolol\.m2\repository\com\gluonhq\attach\lifecycle\4.0.17\lifecycle-4.0.17.jar;C:\Users\lolol\.m2\repository\com\github\almasb\fxgl-core\17.3\fxgl-core-17.3.jar;C:\Users\lolol\.m2\repository\com\github\almasb\fxgl\17.3\fxgl-17.3.jar;C:\Use-Djdk.module.main=selentar.productmanager 
+java_command: selentar.productmanager/selentar.productmanager.StartWork
+java_class_path (initial): C:\Users\lolol\.m2\repository\org\openjfx\javafx-controls\17.0.6\javafx-controls-17.0.6.jar;C:\Users\lolol\.m2\repository\org\openjfx\javafx-graphics\17.0.6\javafx-graphics-17.0.6.jar;C:\Users\lolol\.m2\repository\org\openjfx\javafx-base\17.0.6\javafx-base-17.0.6.jar;C:\Users\lolol\.m2\repository\org\openjfx\javafx-fxml\17.0.6\javafx-fxml-17.0.6.jar;C:\Users\lolol\.m2\repository\org\openjfx\javafx-web\17.0.6\javafx-web-17.0.6.jar;C:\Users\lolol\.m2\repository\org\openjfx\javafx-swing\17.0.6\javafx-swing-17.0.6.jar;C:\Users\lolol\.m2\repository\org\openjfx\javafx-media\17.0.6\javafx-media-17.0.6.jar;C:\Users\lolol\.m2\repository\org\jetbrains\kotlin\kotlin-stdlib-common\1.8.10\kotlin-stdlib-common-1.8.10.jar;C:\Users\lolol\.m2\repository\org\jetbrains\annotations\13.0\annotations-13.0.jar
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 12                                        {product} {ergonomic}
+     uint ConcGCThreads                            = 3                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 13                                        {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 2097152                                   {product} {ergonomic}
+   size_t InitialHeapSize                          = 255852544                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MarkStackSizeMax                         = 536870912                                 {product} {ergonomic}
+   size_t MaxHeapSize                              = 4078960640                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 2097152                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 7602176                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122093568                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 121962496                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+   size_t SoftMaxHeapSize                          = 4078960640                             {manageable} {ergonomic}
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags foldmultilines=false
+ #1: stderr all=off uptime,level,tags foldmultilines=false
+
+Environment Variables:
+PATH=N:\MinGW\bin;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files (x86)\Windows Kits\10\Windows Performance Toolkit\;C:\Program Files\Git\cmd;C:\Users\lolol\AppData\Local\Microsoft\WindowsApps;N:\Programs\Microsoft VS Code\bin;
+USERNAME=lolol
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=AMD64 Family 25 Model 68 Stepping 1, AuthenticAMD
+TMP=C:\Users\lolol\AppData\Local\Temp
+TEMP=C:\Users\lolol\AppData\Local\Temp
+
+
+
+
+Periodic native trim disabled
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 10 , 64 bit Build 19041 (10.0.19041.5794)
+OS uptime: 3 days 8:04 hours
+
+CPU: total 16 (initial active 16) (16 cores per cpu, 2 threads per core) family 25 model 68 stepping 1 microcode 0x0, cx8, cmov, fxsr, ht, mmx, 3dnowpref, sse, sse2, sse3, ssse3, sse4a, sse4.1, sse4.2, popcnt, lzcnt, tsc, tscinvbit, avx, avx2, aes, clmul, bmi1, bmi2, adx, sha, fma, vzeroupper, clflush, clflushopt, rdtscp, rdpid, f16c, pku, cet_ss
+Processor Information for processor 0
+  Max Mhz: 3201, Current Mhz: 3201, Mhz Limit: 3201
+Processor Information for processor 1
+  Max Mhz: 3201, Current Mhz: 2537, Mhz Limit: 3201
+Processor Information for processor 2
+  Max Mhz: 3201, Current Mhz: 3201, Mhz Limit: 3201
+Processor Information for processor 3
+  Max Mhz: 3201, Current Mhz: 2537, Mhz Limit: 3201
+Processor Information for processor 4
+  Max Mhz: 3201, Current Mhz: 2537, Mhz Limit: 3201
+Processor Information for processor 5
+  Max Mhz: 3201, Current Mhz: 2537, Mhz Limit: 3201
+Processor Information for processor 6
+  Max Mhz: 3201, Current Mhz: 3201, Mhz Limit: 3201
+Processor Information for processor 7
+  Max Mhz: 3201, Current Mhz: 2537, Mhz Limit: 3201
+Processor Information for processor 8
+  Max Mhz: 3201, Current Mhz: 3201, Mhz Limit: 3201
+Processor Information for processor 9
+  Max Mhz: 3201, Current Mhz: 2537, Mhz Limit: 3201
+Processor Information for processor 10
+  Max Mhz: 3201, Current Mhz: 3201, Mhz Limit: 3201
+Processor Information for processor 11
+  Max Mhz: 3201, Current Mhz: 2537, Mhz Limit: 3201
+Processor Information for processor 12
+  Max Mhz: 3201, Current Mhz: 3201, Mhz Limit: 3201
+Processor Information for processor 13
+  Max Mhz: 3201, Current Mhz: 2537, Mhz Limit: 3201
+Processor Information for processor 14
+  Max Mhz: 3201, Current Mhz: 2537, Mhz Limit: 3201
+Processor Information for processor 15
+  Max Mhz: 3201, Current Mhz: 2537, Mhz Limit: 3201
+
+Memory: 4k page, system-wide physical 15557M (683M free)
+TotalPageFile size 34674M (AvailPageFile size 254M)
+current process WorkingSet (physical memory assigned to process): 12M, peak: 12M
+current process commit charge ("private bytes"): 71M, peak: 314M
+
+vm_info: OpenJDK 64-Bit Server VM (24.0.1+9-30) for windows-amd64 JRE (24.0.1+9-30), built on 2025-03-05T07:23:45Z with MS VC++ 17.6 (VS2022)
+
+END.
